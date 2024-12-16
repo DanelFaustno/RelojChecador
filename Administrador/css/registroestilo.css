@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* El CSS que has proporcionado en la pregunta va aquí */
+html, body {
+    height: 100%; /* Asegura que el body y html ocupen toda la altura de la pantalla */
+    margin: 0;
+}
+body {
+    background-color: #e0e0e0; /* Color de fondo más suave */
+    background-image: url(http://res.cloudinary.com/jenelle-miller/image/upload/v1518619522/doodles_cuau2z.png);
+    background-repeat: repeat;
+}
+/* Estilo para el header */
+.main-header {
+    width: 100%;
+    padding: 15px;
+    background-color: #174cf7;
+    color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    justify-content: space-between; /* Ajusta para alinear el contenido */
+}
+
+.main-header h1 {
+    font-size: 28px; /* Tamaño más grande */
+    margin: 0;
+    font-weight: bold; /* Para resaltar el título */
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Efecto de sombra */
+    font-family: 'Arial', sans-serif; /* Cambia la fuente si lo deseas */
+    letter-spacing: 1.5px;
+    padding-left: 20px; /* Espacio a la izquierda */
+}
+
+h1 {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    color: #174cf7; /* Azul para el título */
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+}
+.main-header nav {
+    margin-left: auto; /* Mueve el nav a la derecha */
+    margin-right: 20px;
+}
+.main-header .login-link {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+/* Estilos generales */
+body, html {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+}
+
+/* Contenedor principal centrado */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px; /* Ajusta según el tamaño del header */
+}
+
+/* Cuadro contenedor */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 450px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+/* Textbox de registro */
+.register-textbox {
+    margin-top: 20px;
+    position: relative;
+    width: 80%;
+}
+
+.register-textbox input[type="textbox"] {
+    padding: 14px;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+    background: linear-gradient(145deg, #e0e0e0, #f7f7f7);
+    border: none;
+    border-radius: 8px;
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.1), inset -3px -3px 8px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+}
+
+.register-textbox input[type="textbox"]:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -4px 8px rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+.register-textbox label {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    color: #888;
+    font-size: 16px;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.register-textbox input[type="textbox"]:focus + label,
+.register-textbox input[type="textbox"]:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 10px;
+    font-size: 14px;
+    color: #1515e4;
+    background-color: #f9f9f9;
+    padding: 0 5px;
+    border-radius: 4px;
+}
+
+/* Botones de entrada y salida */
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.buttons button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.buttons .entry-btn {
+    background-color: #4CAF50;
+}
+
+.buttons .exit-btn {
+    background-color: #f44336;
+}
+
+.buttons .entry-btn:hover {
+    background-color: #45a049;
+}
+
+.buttons .exit-btn:hover {
+    background-color: #e53935;
+}

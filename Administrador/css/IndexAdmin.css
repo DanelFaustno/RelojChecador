@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #e0e0e0; /* Fondo suave */
+    background-image: url(http://res.cloudinary.com/jenelle-miller/image/upload/v1518619522/doodles_cuau2z.png);
+    background-repeat: repeat;
+}
+
+/* TITULOS */
+h1, h2 {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    color: #174cf7; /* Azul */
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: .9rem;
+    color: #8498AF;
+    border: 1px solid #DAE2F1;
+}
+
+th {
+    background-color: #174cf7; /* Azul principal */
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e0e7ff; /* Resaltado al pasar el mouse */
+}
+
+/* ENCABEZADO DE LA PÁGINA */
+.main-header {
+    width: 100%;
+    padding: 15px;
+    background-color: #174cf7; /* Azul */
+    color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+.main-header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    padding-left: 20px;
+}
+
+.main-header nav {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+/* ENLACES */
+a {
+    color: #174cf7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff5733;
+}
+
+/* Botón desplegable en el encabezado */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.dropbtn {
+    background-color: #ffffff; /* Fondo blanco para que resalte */
+    color: #174cf7; /* Color azul del ícono para que contraste */
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%; /* Forma redonda */
+    border: 2px solid #174cf7; /* Borde azul */
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: #ff5733; /* Fondo color naranja al pasar el ratón */
+    color: white; /* Ícono blanco para mayor contraste */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Lato', sans-serif;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #174cf7;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Reloj en el menú desplegable */
+.clock {
+    padding: 12px 16px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #174cf7; /* Azul para el texto del reloj */
+    text-align: center;
+    margin-top: 10px;
+    border-top: 1px solid #e0e0e0; /* Línea separadora */
+}
+
+.clock span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #174cf7;
+}
+
+.notificacion {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #ff5733; /* Color de fondo llamativo */
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out; /* Efecto de entrada */
+    border: 2px solid #174cf7; /* Borde azul */
+}
+
+/* Animación para que aparezca suavemente */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Añadir un botón para cerrar la notificación */
+.notificacion .close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+

@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #e0e0e0; /* Color de fondo más suave */
+    background-image: url(http://res.cloudinary.com/jenelle-miller/image/upload/v1518619522/doodles_cuau2z.png);
+    background-repeat: repeat;
+}
+
+.home-icon {
+    position: absolute;
+    top: 15px; /* Ajusta la distancia desde la parte superior */
+    right: 15px; /* Ajusta la distancia desde el lado derecho */
+    font-size: 30px; /* Tamaño del ícono */
+    color: #174cf7; /* Color del ícono */
+    text-decoration: none; /* Elimina subrayado */
+    transition: color 0.3s ease; /* Efecto de transición al pasar el mouse */
+}
+
+.home-icon:hover {
+    color: #ff5733; /* Color del ícono cuando el cursor pasa por encima */
+}
+
+
+/* HEADER */
+.main-header {
+    width: 100%;
+    padding: 15px;
+    background-color: #174cf7; /* Azul principal */
+    color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    justify-content: space-between; /* Ajusta para alinear el contenido */
+}
+
+.main-header h1 {
+    font-size: 28px; /* Tamaño más grande */
+    margin: 0;
+    font-weight: bold; /* Para resaltar el título */
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Efecto de sombra */
+    font-family: 'Arial', sans-serif; /* Cambia la fuente si lo deseas */
+    letter-spacing: 1.5px;
+    padding-left: 20px; /* Espacio a la izquierda */
+}
+
+.main-header nav {
+    margin-left: auto; /* Mueve el nav a la derecha */
+    margin-right: 20px;
+}
+
+.main-header .login-link {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px; /* Para evitar que el contenido quede cubierto por el header fijo */
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    color: #174cf7; /* Azul para el título */
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+}
+
+/* FORMULARIO */
+.form-background {
+    background: #ffffff;
+    width: 420px;
+    border-radius: 10px;
+    padding: 32px;
+    box-shadow: 0px 15px 88px -37px rgba(0, 0, 0, 0.17);
+}
+
+form {
+    text-transform: capitalize;
+    font-family: 'Lato', 'Arial', sans-serif;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: 1px solid #DAE2F1;
+    padding: 15px 20px;
+    color: #8498AF;
+    font-size: .9rem;
+    transition: .4s;
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.1), inset -3px -3px 8px rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+    border-color: #174cf7; /* Azul cuando se selecciona */
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+[type="submit"] {
+    background: #174cf7; /* Azul para enviar */
+    border-radius: 30px;
+    padding: 16px 30px;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .8rem;
+    transition: .4s;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+[type="submit"]:hover {
+    background: #0f3b9d; /* Tonalidad más oscura de azul */
+}
+
+.sign-up-divider {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    text-align: center;
+    color: #C4C8D4;
+    font-size: .8rem;
+    letter-spacing: .5px;
+    padding: 24px 0;
+}
+
+.sign-up-divider::before, .sign-up-divider::after {
+    content: '';
+    display: inline-block;
+    width: 27%;
+    height: 1px;
+    background: #DAE2F1;
+    vertical-align: middle;
+}
+
+/* ICONOS DE REDES SOCIALES */
+.social-media-icons {
+    text-align: center;
+    color: #fff;
+}
+
+.social-media-icons li {
+    margin-right: 10px;
+    list-style: none;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1rem;
+    padding-top: 15px;
+}
+
+.social-media-icons li a {
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+}
+
+li.google {
+    background: #EA5859;
+}
+
+li.google:hover {
+    background: #d04e53;
+}
+
+li.facebook {
+    background: #527ED5;
+}
+
+li.facebook:hover {
+    background: #496fbf;
+}
+
+li.twitter {
+    background: #61BDED;
+}
+
+li.twitter:hover {
+    background: #57a9ce;
+}
+
+.login {
+    text-align: center;
+    margin-top: 24px;
+    font-size: .8rem;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+.login a {
+    margin-left: 4px;
+    text-decoration: none;
+    color: #174cf7;
+    transition: .3s;
+}
+
+.login a:hover {
+    color: #0f3b9d;
+}
